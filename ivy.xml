@@ -16,6 +16,8 @@
 
         <dependency org="com.github.peichhorn" name="lombok-pg" rev="0.10.8-SNAPSHOT" conf="compile->default" />
 
+        <dependency org="com.sun.jersey" name="jersey-server" rev="1.12-SNAPSHOT" conf="compile->default"/>
+
         <dependency org="junit" name="junit" rev="4.+" conf="test->default" />
         <dependency org="org.mockito" name="mockito-all" rev="1.+" conf="test->default" />
 

@@ -7,6 +7,8 @@
 
         <ibiblio name="sonatype" root="https://oss.sonatype.org/content/repositories/snapshots/" m2compatible="true"/>
 
+        <ibiblio name="java" root="https://maven.java.net/content/repositories/snapshots/" m2compatible="true"/>
+
         <url name="jgit-describe">
             <ivy pattern="file:///${basedir}/etc/ivy/[module]/ivy.xml"/>
             <artifact pattern="http://shanemcc.github.com/jgit-describe/releases/jgit-describe-[revision].jar"/>
@@ -21,5 +23,6 @@
         <module organisation="com.github.shanemcc" name="jgit-describe" resolver="jgit-describe"/>
         <module organisation="org.eclipse.jgit" name="*" resolver="jgit"/>
         <module organisation="com.github.peichhorn" name="*" resolver="sonatype"/>
+        <module organisation="com.sun.*" name="*" resolver="java"/>
     </modules>
 </ivysettings>
