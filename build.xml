@@ -11,8 +11,15 @@
     <mkdir dir="${build}"/>
   </target>
 
-  <target name="compile" depends="init" description="compile the source">
-    <javac srcdir="${src}" destdir="${build}" includeantruntime="false"/>
+  <target name="compile" depends="init,-get-version" description="compile the source">
+    <path id="compile-classpath">
+      <fileset dir="lib">
+        <include name="**/*.jar"/>
+      </fileset>
+    </path>
+
+    <javac srcdir="${src}" destdir="${build}" includeantruntime="false" classpathref="compile-classpath"/>
+    <echo file="${build}/name/smithc/chris/version">${version}</echo>
   </target>
 
   <target name="-init-version">
@@ -24,15 +31,29 @@
     <taskdef name="git-describe" classname="org.mdonoughe.JGitDescribeTask" classpathref="jgit-classpath"/>
   </target>
 
-  <target name="dist" depends="compile,-init-version" description="generate the distribution">
+  <target name="-get-version" depends="-init-version">
+    <git-describe dir=".git" property="version" />
+  </target>
+
+  <target name="dist" depends="compile,-get-version" description="generate the distribution">
     <mkdir dir="${dist}"/>
 
-    <git-describe dir=".git" property="version" />
     <jar jarfile="${dist}/RestIRC-${version}.jar" basedir="${build}"/>
   </target>
 
   <target name="clean" description="clean up">
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
+  </target>
+
+  <target name="run" depends="compile">
+    <path id="run-classpath">
+      <pathelement path="${build}"/>
+      <fileset dir="lib">
+        <include name="**/*.jar"/>
+      </fileset>
+    </path>
+
+    <java classpathref="run-classpath" classname="name.smith.chris.restirc.RestIrc"/>
   </target>
 </project>

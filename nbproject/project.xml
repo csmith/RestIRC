@@ -39,6 +39,9 @@
                     <target>clean</target>
                     <target>compile</target>
                 </action>
+                <action name="run">
+                    <target>run</target>
+                </action>
             </ide-actions>
             <export>
                 <type>folder</type>
@@ -63,6 +66,7 @@
                     <ide-action name="build"/>
                     <ide-action name="rebuild"/>
                     <ide-action name="clean"/>
+                    <ide-action name="run"/>
                 </context-menu>
             </view>
             <subprojects/>
@@ -70,7 +74,7 @@
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/3">
             <compilation-unit>
                 <package-root>src</package-root>
-                <classpath mode="compile">lib/asm-3.1.jar:lib/hamcrest-core-1.1.jar:lib/ivy-2.2.0.jar:lib/jersey-server-1.12-SNAPSHOT.jar:lib/jgit-describe-0.1.jar:lib/jsch-0.1.44-1.jar:lib/junit-4.10.jar:lib/logback-classic-1.0.0.jar:lib/logback-core-1.0.0.jar:lib/lombok-pg-0.10.8-SNAPSHOT.jar:lib/mockito-all-1.9.0.jar:lib/org.eclipse.jgit-1.2.0.201112221803-r.jar:lib/parser-common-working@dmdirc-parser-common.jar:lib/parser-irc-working@dmdirc-parser-irc.jar:lib/slf4j-api-1.6.4.jar:lib/util-working@dmdirc-util.jar</classpath>
+                <classpath mode="compile">lib/asm-3.1.jar:lib/gmbal-api-only-3.0.0-b023.jar:lib/grizzly-framework-2.1.2.jar:lib/grizzly-http-2.1.2.jar:lib/grizzly-http-server-2.1.2.jar:lib/grizzly-rcm-2.1.2.jar:lib/hamcrest-core-1.1.jar:lib/ivy-2.2.0.jar:lib/jackson-core-asl-1.9.2.jar:lib/jackson-jaxrs-1.9.2.jar:lib/jackson-mapper-asl-1.9.2.jar:lib/jackson-xc-1.9.2.jar:lib/javax.ws.rs-api-2.0-m01.jar:lib/jersey-grizzly2-1.11.jar:lib/jersey-json-1.11.jar:lib/jersey-server-1.11.jar:lib/jettison-1.1.jar:lib/jgit-describe-0.1.jar:lib/jsch-0.1.44-1.jar:lib/junit-4.10.jar:lib/logback-classic-1.0.0.jar:lib/logback-core-1.0.0.jar:lib/lombok-pg-0.10.8-SNAPSHOT.jar:lib/management-api-3.0.0-b012.jar:lib/mockito-all-1.9.0.jar:lib/org.eclipse.jgit-1.2.0.201112221803-r.jar:lib/parser-common-working@dmdirc-parser-common.jar:lib/parser-irc-working@dmdirc-parser-irc.jar:lib/slf4j-api-1.6.4.jar:lib/stax-api-1.0.1.jar:lib/util-working@dmdirc-util.jar</classpath>
                 <built-to>build</built-to>
                 <source-level>1.7</source-level>
             </compilation-unit>
