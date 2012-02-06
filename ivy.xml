@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+    <info organisation="name.smith.chris" module="restirc"/>
+
+    <configurations>
+        <conf name="build" description="Everything needed to support the build process"/>
+        <conf name="compile" description="Everything needed to compile RestIRC separately"/>
+        <conf name="test" description="Everything needed to test RestIRC"/>
+        <conf name="default" extends="build,compile,test"/>
+    </configurations>
+
+    <dependencies>
+        <dependency org="com.github.shanemcc" name="jgit-describe" rev="0.1" conf="build->default" />
+
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.6.+" conf="compile->default" />
+        <dependency org="ch.qos.logback" name="logback-classic" rev="1.+" conf="test->default" />
+
+        <dependency org="com.github.peichhorn" name="lombok-pg" rev="0.10.8-SNAPSHOT" conf="compile->default" />
+
+        <dependency org="junit" name="junit" rev="4.+" conf="test->default" />
+        <dependency org="org.mockito" name="mockito-all" rev="1.+" conf="test->default" />
+
+        <exclude org="ant" module="ant"/>
+    </dependencies>
+</ivy-module>
