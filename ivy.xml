@@ -19,6 +19,7 @@
         <dependency org="com.sun.jersey" name="jersey-server" rev="1.12-SNAPSHOT" conf="compile->default"/>
         <dependency org="com.dmdirc" name="parser-common" rev="latest.integration" conf="compile->default"/>
         <dependency org="com.dmdirc" name="parser-irc" rev="latest.integration" conf="compile->default"/>
+        <dependency org="com.dmdirc" name="util" rev="latest.integration" conf="compile->default"/>
 
         <dependency org="junit" name="junit" rev="4.+" conf="test->default" />
         <dependency org="org.mockito" name="mockito-all" rev="1.+" conf="test->default" />

@@ -22,6 +22,10 @@
             <artifact pattern="http://teamcity.dmdirc.com/guestAuth/repository/download/bt9/.lastSuccessful/parser.common.jar"/>
         </url>
 
+        <url name="dmdirc-util">
+            <artifact pattern="http://teamcity.dmdirc.com/guestAuth/repository/download/bt7/.lastSuccessful/util.jar"/>
+        </url>
+
         <packager name="packager" buildRoot="${user.home}/.ivy2/packager/build" resourceCache="${user.home}/.ivy2/packager/cache" preserveBuildDirectories="true">
             <ivy pattern="file:///${basedir}/etc/ivy/[module]/ivy.xml"/>
             <artifact pattern="file:///${basedir}/etc/ivy/[module]/packager.xml"/>
@@ -34,5 +38,6 @@
         <module organisation="com.sun.*" name="*" resolver="java"/>
         <module organisation="com.dmdirc" name="parser-common" resolver="dmdirc-parser-common"/>
         <module organisation="com.dmdirc" name="parser-irc" resolver="dmdirc-parser-irc"/>
+        <module organisation="com.dmdirc" name="util" resolver="dmdirc-util"/>
     </modules>
 </ivysettings>
