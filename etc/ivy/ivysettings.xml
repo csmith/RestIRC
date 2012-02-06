@@ -14,6 +14,14 @@
             <artifact pattern="http://shanemcc.github.com/jgit-describe/releases/jgit-describe-[revision].jar"/>
         </url>
 
+        <url name="dmdirc-parser-irc">
+            <artifact pattern="http://teamcity.dmdirc.com/guestAuth/repository/download/bt9/.lastSuccessful/parser.irc.jar"/>
+        </url>
+
+        <url name="dmdirc-parser-common">
+            <artifact pattern="http://teamcity.dmdirc.com/guestAuth/repository/download/bt9/.lastSuccessful/parser.common.jar"/>
+        </url>
+
         <packager name="packager" buildRoot="${user.home}/.ivy2/packager/build" resourceCache="${user.home}/.ivy2/packager/cache" preserveBuildDirectories="true">
             <ivy pattern="file:///${basedir}/etc/ivy/[module]/ivy.xml"/>
             <artifact pattern="file:///${basedir}/etc/ivy/[module]/packager.xml"/>
@@ -24,5 +32,7 @@
         <module organisation="org.eclipse.jgit" name="*" resolver="jgit"/>
         <module organisation="com.github.peichhorn" name="*" resolver="sonatype"/>
         <module organisation="com.sun.*" name="*" resolver="java"/>
+        <module organisation="com.dmdirc" name="parser-common" resolver="dmdirc-parser-common"/>
+        <module organisation="com.dmdirc" name="parser-irc" resolver="dmdirc-parser-irc"/>
     </modules>
 </ivysettings>
