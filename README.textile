@@ -1,0 +1,12 @@
+h1. RestIRC
+
+h2. What is it?
+
+_RestIRC_ aims to provide a REST-ful interface to IRC. The primary use-case is
+to allow websites, scripts and applications to quickly and easily interact with
+IRC to, for example, notify certain channels about events. After that, the goal
+is to enable remote scripts and applications to listen to and respond to events
+by registering WebHooks.
+
+Ideally, it will eventually be possible to write a full IRC client on top of
+the API without having to interact with IRC itself directly.
