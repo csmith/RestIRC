@@ -10,3 +10,28 @@ by registering WebHooks.
 
 Ideally, it will eventually be possible to write a full IRC client on top of
 the API without having to interact with IRC itself directly.
+
+h2. Resources
+
+These are the planned resources that RestIRC will expose. Methods that aren't
+yet implemented are -struck out-.
+
+* /version (GET)
+* /servers (-GET-, -POST-)
+* /servers/*server* (-GET-)
+* /servers/*server*/channels (-GET-, -POST-)
+* /servers/*server*/channels/*channel* (-GET-, -PUT-, -DELETE-)
+* /servers/*server*/channels/*channel*/topic (-GET-, -PUT-)
+* /servers/*server*/channels/*channel*/topic/author (-GET-)
+* /servers/*server*/channels/*channel*/messages (-GET-, -POST-)
+* /servers/*server*/channels/*channel*/users (-GET-)
+* /servers/*server*/users (-nothing?-)
+* /servers/*server*/users/*user* (-GET-)
+* /servers/*server*/users/*user*/messages (-GET-, -POST-)
+
+In addition, most resources will expose a hooks subresource to allow
+configuring WebHooks to be called:
+
+* /hooks (-GET-)
+* /hooks/*event-type* (-GET-, -PUT-, -POST-)
+* /hooks/*event-type*/*hook-id* (-GET-, -PUT-, -DELETE-)
