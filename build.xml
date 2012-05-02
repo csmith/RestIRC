@@ -52,6 +52,7 @@
       <fileset dir="lib">
         <include name="**/*.jar"/>
       </fileset>
+      <pathelement path="etc"/>
     </path>
 
     <java classpathref="run-classpath" classname="name.smith.chris.restirc.RestIrc"/>
