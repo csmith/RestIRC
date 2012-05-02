@@ -36,7 +36,7 @@
         <module organisation="org.eclipse.jgit" name="*" resolver="jgit"/>
         <module organisation="com.github.peichhorn" name="*" resolver="sonatype"/>
         <module organisation="com.sun.*" name="*" resolver="java"/>
-        <module organisation="javax.*" name="*" resolver="java"/>
+        <module organisation="javax.ws.*" name="*" resolver="java"/>
         <module organisation="com.dmdirc" name="parser-common" resolver="dmdirc-parser-common"/>
         <module organisation="com.dmdirc" name="parser-irc" resolver="dmdirc-parser-irc"/>
         <module organisation="com.dmdirc" name="util" resolver="dmdirc-util"/>

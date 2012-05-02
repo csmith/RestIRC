@@ -22,6 +22,8 @@
         <dependency org="com.sun.jersey" name="jersey-json" rev="1.+" conf="compile->default"/>
         <dependency org="javax.ws.rs" name="javax.ws.rs-api" rev="2.+" conf="compile->default"/>
 
+        <dependency org="com.google.inject" name="guice" rev="3.+" conf="compile->default"/>
+
         <dependency org="com.dmdirc" name="parser-common" rev="latest.integration" conf="compile->default"/>
         <dependency org="com.dmdirc" name="parser-irc" rev="latest.integration" conf="compile->default"/>
         <dependency org="com.dmdirc" name="util" rev="latest.integration" conf="compile->default"/>
