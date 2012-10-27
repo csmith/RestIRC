@@ -8,9 +8,12 @@ import java.net.URI;
 
 import javax.ws.rs.core.UriBuilder;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Main program entry point. Handles initialisation logic.
  */
+@Slf4j
 public class RestIrc {
 
     private static URI getBaseURI() {
